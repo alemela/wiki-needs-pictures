@@ -29,43 +29,17 @@ var points = L.geoCsv (null, {
         }
         popup += "</table></popup-content>";
         layer.bindPopup(popup, popupOpts);
-    },
-    filter: function(feature, layer) {
-        total += 1;
-        if (!filterString) {
-            hits += 1;
-            return true;
-        }
-        var hit = false;
-        var lowerFilterString = filterString.toLowerCase().strip();
-        $.each(feature.properties, function(k, v) {
-            var value = v.toLowerCase();
-            if (value.indexOf(lowerFilterString) !== -1) {
-                hit = true;
-                hits += 1;
-                return false;
-            }
-        });
-        return hit;
     }
 });
 
 var hits = 0;
 var total = 0;
-var filterString;
 var markers = new L.MarkerClusterGroup();
 var dataCsv;
 
 var addCsvMarkers = function() {
     hits = 0;
     total = 0;
-    filterString = document.getElementById('filter-string').value;
-
-    if (filterString) {
-        $("#clear").fadeIn();
-    } else {
-        $("#clear").fadeOut();
-    }
 
     map.removeLayer(markers);
     points.clearLayers();
@@ -83,9 +57,6 @@ var addCsvMarkers = function() {
     } catch(err) {
         // pass
     }
-    if (total > 0) {
-        $('#search-results').html("Showing " + hits + " of " + total);
-    }
     return false;
 };
 
@@ -99,24 +70,6 @@ function ArrayToSet(a) {
     for (var k in temp)
         r.push(k);
     return r;
-}
-
-function populateTypeAhead(csv, delimiter) {
-    var lines = csv.split("\n");
-    for (var i = lines.length - 1; i >= 1; i--) {
-        var items = lines[i].split(delimiter);
-        for (var j = items.length - 1; j >= 0; j--) {
-            var item = items[j].strip();
-            item = item.replace(/"/g,'');
-            if (item.indexOf("http") !== 0 && isNaN(parseFloat(item))) {
-                typeAheadSource.push(item);
-                var words = item.split(/\W+/);
-                for (var k = words.length - 1; k >= 0; k--) {
-                    typeAheadSource.push(words[k]);
-                }
-            }
-        }
-    }
 }
 
 if(typeof(String.prototype.strip) === "undefined") {
@@ -138,16 +91,12 @@ $(document).ready( function() {
         },
         success: function(csv) {
             dataCsv = csv;
-            populateTypeAhead(csv, fieldSeparator);
-            typeAheadSource = ArrayToSet(typeAheadSource);
-            $('#filter-string').typeahead({source: typeAheadSource});
             addCsvMarkers();
         }
     });
 
     $("#clear").click(function(evt){
         evt.preventDefault();
-        $("#filter-string").val("").focus();
         addCsvMarkers();
     });
 
