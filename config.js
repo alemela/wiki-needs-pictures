@@ -1,4 +1,4 @@
-var dataUrl = 'data/stazioni.csv';
+var dataUrl = 'data/itwiki.csv';
 var maxZoom = 15;
 var fieldSeparator = ',';
 var baseUrl = 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg';
