@@ -21,7 +21,7 @@ var points = L.geoCsv (null, {
                 layer.bindLabel(feature.properties[clave], {className: 'map-label'});
             }
             if (title === "title") {
-                attr = '<a target="_blank" href="//it.wikipedia.org/wiki' + attr + '">'+ attr + '</a>';
+                attr = '<a target="_blank" href="//it.wikipedia.org/wiki/' + attr + '">'+ attr + '</a>';
             }
             if (attr) {
                 popup += '<tr><th>'+title+'</th><td>'+ attr +'</td></tr>';
