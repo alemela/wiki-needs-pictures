@@ -60,8 +60,6 @@ var addCsvMarkers = function() {
     return false;
 };
 
-var typeAheadSource = [];
-
 function ArrayToSet(a) {
     var temp = {};
     for (var i = 0; i < a.length; i++)
