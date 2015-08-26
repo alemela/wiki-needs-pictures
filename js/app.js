@@ -29,6 +29,24 @@ var points = L.geoCsv (null, {
         }
         popup += "</table></popup-content>";
         layer.bindPopup(popup, popupOpts);
+    },
+    pointToLayer: function (feature, latlng) {
+        for (var clave in feature.properties) {
+            var title = points.getPropertyTitle(clave).strip();
+            var attr = feature.properties[clave];
+            if (title === "type") {
+                if (attr === "airport") {
+                    return L.marker(latlng, { icon: airportMarker });
+                }
+                if (attr === "adm1st" || attr === "adm2nd" || attr === "adm3rd" || attr === "city") {
+                    return L.marker(latlng, { icon: cityMarker });
+                }
+                if (attr === "railwaystation") {
+                    return L.marker(latlng, { icon: stationMarker });
+                }
+            }
+        }
+        return L.marker(latlng, { icon: blueMarker });
     }
 });
 
