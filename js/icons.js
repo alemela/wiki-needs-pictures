@@ -1,10 +1,12 @@
 var blueMarker = L.AwesomeMarkers.icon({
     icon: 'record',
+    prefix: 'glyphicon',
     markerColor: 'blue'
 });
 
 var airportMarker = L.AwesomeMarkers.icon({
     icon: 'plane',
+    prefix: 'fa',
     markerColor: 'cadetblue'
 });
 
@@ -14,6 +16,7 @@ var cityMarker = L.AwesomeMarkers.icon({
 });
 
 var stationMarker = L.AwesomeMarkers.icon({
-    icon: 'random',
+    icon: 'train',
+    prefix: 'fa',
     markerColor: 'cadetblue'
 });
