@@ -164,6 +164,20 @@ map.on('overlayremove', function (a) {
     }
 });
 
+/* BUTTONS */
+
+L.easyButton('fa-info', function(){
+    window.open("https://it.wikipedia.org/wiki/Wikipedia:Bar/Discussioni/Nuovo_tool_per_le_immagini_richieste", '_blank');
+}, "Info", { position: 'topright' }).addTo(map);
+
+L.easyButton('fa-github', function(){
+    window.open("https://github.com/alemela/wiki-needs-pictures", '_blank');
+}, "Github repository", { position: 'topright' }).addTo(map);
+
+L.easyButton('fa-compass', function (){
+    map.locate({setView: true});
+}, "Interact with the map", { position: 'bottomright' }).addTo(map);
+
 /* UTILS */
 
 if(typeof(String.prototype.strip) === "undefined") {
