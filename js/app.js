@@ -100,8 +100,8 @@ var popupGenerator = function(feature, layer) {
             return true;
         }
     });
-    popup += '<a target="_blank" href="//'+prop.site+'/wiki/' + title + '">'+ title + '</a><br>';
-    popup += '<small>From: <a target="_blank" href="//'+prop.site+'/wiki/' + prop.source + '">'+ prop.source + '</a>';
+    popup += '<b><a target="_blank" href="//'+prop.site+'/wiki/' + title + '">'+ title + '</a></b> <small>['+prop.prj+']</small>';
+    popup += '<br><small>From: <a target="_blank" href="//'+prop.site+'/wiki/' + prop.source + '">'+ prop.source + '</a>';
     popup += "</popup-content>";
     layer.bindPopup(popup, popupOpts);
 }

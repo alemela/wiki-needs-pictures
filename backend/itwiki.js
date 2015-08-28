@@ -42,7 +42,7 @@ function locatePage(pagename, code) {
         for (id in info.pages) {
             if (info.pages[id].coordinates !== undefined) {
                 var raw = info.pages[id].title+','+info.pages[id].coordinates[0].lat+','+info.pages[id].coordinates[0].lon+','+info.pages[id].coordinates[0].type+','+code+'\n';
-                fs.appendFile("data/itwiki.csv", raw, function(err) {
+                fs.appendFile("../data/data.csv", raw, function(err) {
                 });
             }
         }

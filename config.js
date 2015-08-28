@@ -1,4 +1,4 @@
-var dataUrl = 'data/itwiki.csv';
+var dataUrl = 'data/data.csv';
 var maxZoom = 16;
 var fieldSeparator = ',';
 var baseUrl = 'http://otile{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.jpg';
