@@ -90,22 +90,20 @@ var addCsvMarkers = function() {
 };
 
 var popupGenerator = function(feature, layer) {
-    var popup = '<div class="popup-content"><table class="table table-striped table-bordered table-condensed">';
-        for (var clave in feature.properties) {
-            var title = airport.getPropertyTitle(clave).strip(); //XXX airport isn't generic
-            var attr = feature.properties[clave];
-            if (title == labelColumn) {
-                layer.bindLabel(feature.properties[clave], {className: 'map-label'});
-            }
-            if (title === "title") {
-                attr = '<a target="_blank" href="//it.wikipedia.org/wiki/' + attr + '">'+ attr + '</a>';
-            }
-            if (attr) {
-                popup += '<tr><th>'+title+'</th><td>'+ attr +'</td></tr>';
-            }
+    var popup = '<div class="popup-content">';
+    var title = feature.properties.title;
+    layer.bindLabel(feature.properties.title, {className: 'map-label'});
+    var prop;
+    codes.some(function (obj) {
+        if (obj.id === feature.properties.code) {
+            prop = obj;
+            return true;
         }
-        popup += "</table></popup-content>";
-        layer.bindPopup(popup, popupOpts);
+    });
+    popup += '<a target="_blank" href="//'+prop.site+'/wiki/' + title + '">'+ title + '</a><br>';
+    popup += '<small>From: <a target="_blank" href="//'+prop.site+'/wiki/' + prop.source + '">'+ prop.source + '</a>';
+    popup += "</popup-content>";
+    layer.bindPopup(popup, popupOpts);
 }
 
 /* CSV LOADING */
@@ -167,11 +165,3 @@ L.easyButton('fa-info', function() {
 L.easyButton('fa-compass', function (){
     map.locate({setView: true});
 }, "Interact with the map", { position: 'bottomright' }).addTo(map);
-
-/* UTILS */
-
-if(typeof(String.prototype.strip) === "undefined") {
-    String.prototype.strip = function() {
-        return String(this).replace(/^\s+|\s+$/g, '');
-    };
-}
