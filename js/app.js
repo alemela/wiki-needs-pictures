@@ -1,14 +1,5 @@
 var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 
-/*var menuButton = L.control({ position: 'bottomright' });
-
-menuButton.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'mini-submenu');
-    this._div.innerHTML = '';
-    return this._div;
-};
-menuButton.addTo(map);*/
-
 var popupOpts = {
     autoPanPadding: new L.Point(5, 50),
     autoPan: true
@@ -166,13 +157,12 @@ map.on('overlayremove', function (a) {
 
 /* BUTTONS */
 
-L.easyButton('fa-info', function(){
-    window.open("https://it.wikipedia.org/wiki/Wikipedia:Bar/Discussioni/Nuovo_tool_per_le_immagini_richieste", '_blank');
-}, "Info", { position: 'topright' }).addTo(map);
-
-L.easyButton('fa-github', function(){
-    window.open("https://github.com/alemela/wiki-needs-pictures", '_blank');
-}, "Github repository", { position: 'topright' }).addTo(map);
+L.easyButton('fa-info', function() {
+    bootbox.dialog({
+        title: "Wiki Needs Pictures",
+        message: '<h5>Work in progress...</h5><ul><li><a href="https://it.wikipedia.org/wiki/Wikipedia:Bar/Discussioni/Nuovo_tool_per_le_immagini_richieste" target="_blank">Discussione su Wikipedia in italiano</a></li><li><a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">Repository su Github</a></li></ul>'
+    });
+}, "Info", { position: 'bottomleft' }).addTo(map);
 
 L.easyButton('fa-compass', function (){
     map.locate({setView: true});
