@@ -47,6 +47,20 @@ var city = L.geoCsv (null, {
     }
 });
 
+var generic = L.geoCsv (null, {
+    firstLineTitles: true,
+    fieldSeparator: fieldSeparator,
+    onEachFeature: function (feature, layer) {
+        popupGenerator(feature, layer);
+    },
+    pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, { icon: blueMarker });
+    },
+    filter: function (feature, layer) {
+        return feature.properties.type === "landmark" || feature.properties.type === "undefined";
+    }
+});
+
 var map = new L.Map('map', {
     center: new L.LatLng(0, 0),
     zoom: 2, 
@@ -66,16 +80,20 @@ var addCsvMarkers = function() {
     markers = new L.MarkerClusterGroup(clusterOptions);
 
     //creo layers
+    //XXX double call to make it works
     airport.addData(dataCsv);
     railwaystation.addData(dataCsv);
-    railwaystation.addData(dataCsv); //XXX doppia chiamata per farlo funzionare
+    railwaystation.addData(dataCsv); 
     city.addData(dataCsv);
     city.addData(dataCsv);
+    generic.addData(dataCsv);
+    generic.addData(dataCsv);
 
     //aggrego layers in markers
     markers.addLayer(airport);
     markers.addLayer(railwaystation);
     markers.addLayer(city);
+    markers.addLayer(generic);
 
     map.addLayer(markers);
     try {
@@ -128,8 +146,10 @@ $(document).ready( function() {
 
 var overlayMaps = {};
 var emptyLayers = {
-    "Aeroporti":  new L.layerGroup().addTo(map),
-    "Stazioni":  new L.layerGroup().addTo(map)
+    "Airports":  new L.layerGroup().addTo(map),
+    "City":  new L.layerGroup().addTo(map),
+    "Railwaystations":  new L.layerGroup().addTo(map),
+    "Uncategorized":  new L.layerGroup().addTo(map)
 };
 for (var index in emptyLayers) {
     overlayMaps[index] = emptyLayers[index];
@@ -139,17 +159,25 @@ var control = L.control.layers(null, overlayMaps);
 control.addTo(map);
 
 map.on('overlayadd', function (a) {
-    if (a.name === "Aeroporti") {
+    if (a.name === "Airports") {
         markers.addLayer(airport);
-    } else if (a.name === "Stazioni") {
+    } else if (a.name === "City") {
+        markers.addLayer(city);
+    } else if (a.name === "Railwaystations") {
         markers.addLayer(railwaystation);
+    } else if (a.name === "Uncategorizes") {
+        markers.addLayer(generic);
     }
 });
 map.on('overlayremove', function (a) {
-    if (a.name === "Aeroporti") {
+    if (a.name === "Airports") {
         markers.removeLayer(airport);
-    } else if (a.name === "Stazioni") {
+    } else if (a.name === "City") {
+        markers.removeLayer(city);
+    } else if (a.name === "Railwaystations") {
         markers.removeLayer(railwaystation);
+    } else if (a.name === "Uncategorized") {
+        markers.removeLayer(generic);
     }
 });
 
