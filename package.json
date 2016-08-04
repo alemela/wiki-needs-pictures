@@ -1,0 +1,24 @@
+{
+  "name": "wiki-needs-pictures",
+  "version": "1.0.0",
+  "description": "Map showing entities around the world that need photographs on Wikipedia.",
+  "main": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alemela/wiki-needs-pictures.git"
+  },
+  "dependencies" :
+    { "nodemw" : "0.7.0"},
+  "keywords": [
+    "wikipedia",
+    "wikidata",
+    "coordinates",
+    "images"
+  ],
+  "author": "Alessio Melandri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alemela/wiki-needs-pictures/issues"
+  },
+  "homepage": "http://tools.wmflabs.org/wiki-needs-pictures"
+}
