@@ -202,3 +202,5 @@ L.easyButton('fa-info', function() {
 L.easyButton('fa-compass', function (){
     map.locate({setView: true});
 }, "Interact with the map", { position: 'bottomright' }).addTo(map);
+
+map.locate({setView: true});
