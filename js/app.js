@@ -1,4 +1,4 @@
-var basemap = new L.TileLayer(baseUrl, {maxZoom: 17, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
+var basemap = new L.TileLayer(baseUrl, {maxZoom: maxZoom, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 
 var popupOpts = {
     autoPanPadding: new L.Point(5, 50),
@@ -63,8 +63,8 @@ var generic = L.geoCsv (null, {
 
 var map = new L.Map('map', {
     center: new L.LatLng(0, 0),
-    zoom: 2, 
-    maxZoom: maxZoom, 
+    zoom: zoom,
+    maxZoom: maxZoom,
     layers: [basemap]
 });
 
@@ -83,7 +83,7 @@ var addCsvMarkers = function() {
     //XXX double call to make it works
     airport.addData(dataCsv);
     railwaystation.addData(dataCsv);
-    railwaystation.addData(dataCsv); 
+    railwaystation.addData(dataCsv);
     city.addData(dataCsv);
     city.addData(dataCsv);
     generic.addData(dataCsv);
