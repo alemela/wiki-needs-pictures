@@ -10,7 +10,7 @@ sort -u temp.csv > sorted.csv
 rm temp.csv
 
 #add header
-sed -i '0,/^/s//title,lat,lng,type,code\n/' sorted.csv
+sed -i '0,/^/s//title,lat,lng,type,code,wd\n/' sorted.csv
 
 #save current dataset into backup directory
 mkdir -p ../data/backup

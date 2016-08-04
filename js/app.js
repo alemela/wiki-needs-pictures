@@ -1,4 +1,4 @@
-var basemap = new L.TileLayer(baseUrl, {maxZoom: maxZoom, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
+var basemap = new L.TileLayer(baseUrl, {maxZoom: maxZoom, minZoom: minZoom, attribution: baseAttribution, subdomains: subdomains, opacity: opacity});
 
 var popupOpts = {
     autoPanPadding: new L.Point(5, 50),
@@ -65,6 +65,7 @@ var map = new L.Map('map', {
     center: new L.LatLng(0, 0),
     zoom: zoom,
     maxZoom: maxZoom,
+    minZoom: minZoom,
     layers: [basemap]
 });
 
@@ -118,8 +119,13 @@ var popupGenerator = function(feature, layer) {
             return true;
         }
     });
-    popup += '<b><a target="_blank" href="//'+prop.site+'/wiki/' + title + '">'+ title + '</a></b> <small>['+prop.prj+']</small>';
-    popup += '<br><small>From: <a target="_blank" href="//'+prop.site+'/wiki/' + prop.source + '">'+ prop.source + '</a>';
+    if (prop.id !== "999") {
+        popup += '<b><a target="_blank" href="//'+prop.site+'/wiki/' + title + '">'+ title + '</a></b> <small>['+prop.prj+']</small>';
+    } else {
+        popup += '<b><a target="_blank" href="//'+prop.site+'/wiki/' + feature.properties.wd + '">'+ title + '</a></b> <small>['+prop.prj+']</small>';
+    }
+    if (prop.source !== null)
+        popup += '<br><small>From: <a target="_blank" href="//'+prop.site+'/wiki/' + prop.source + '">'+ prop.source + '</a>';
     popup += "</popup-content>";
     layer.bindPopup(popup, popupOpts);
 }
@@ -165,7 +171,7 @@ map.on('overlayadd', function (a) {
         markers.addLayer(city);
     } else if (a.name === "Railwaystations") {
         markers.addLayer(railwaystation);
-    } else if (a.name === "Uncategorizes") {
+    } else if (a.name === "Uncategorized") {
         markers.addLayer(generic);
     }
 });
