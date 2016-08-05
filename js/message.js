@@ -35,13 +35,25 @@ var message_DE =
   '<p><small>Das Tool aktualisiert die Ansicht täglich. Bitte seien Sie geduldig: es dauert eine Weile, bis die Daten geladen sind.<small></p>'
 
 var message_FR =
-  '<p><b>De nombreux articles de Wikipedia ont aucune image</b> ou seulement quelques-unes. Certains d\'entre eux parle de <b>choses qui sont là dehors</b>, prêtes à être photographiées. <b>Trouvez-les toutes !</b></p><hr/>' +
+  '<p><b>De nombreux articles de Wikipédia n\'ont pas d\'image</b> ou seulement quelques-unes. Certains d\'entre eux ont pour sujet des <b>choses qui sont là dehors</b>, prêtes à être photographiées. <b>Trouvez-les toutes !</b></p><hr/>' +
   '<p><b>Instructions</b></p>' +
   '<p><ul><li>Utilisez le bouton dans le coin supérieur gauche ou double-cliquez sur la carte pour régler le zoom. Vous pouvez également cliquer sur un cluster près de l\'endroit que vous souhaitez explorer.</li>' +
   '<li>Utilisez le bouton dans le coin supérieur droit pour filtrer les épingles (icones pointues) par catégorie.</li>' +
   '<li>Utilisez le bouton dans le coin inférieur droit pour accéder à votre position actuelle.</li>' +
   '<li>Passez sur un "épingle" pour voir son nom. Faites un clic pour plus de détails et de liens.</li></ul>' +
-  'Prenez des photos et téléchargez-les sur Wikimedia Commons, puis résoudrez l\'alerte (par exemple enlevez le modèle dans sa page ou ajoutez l\'image à Wikidata) et lors de la prochaine exécution vous verrez l\'épingle disparaître. Super boulot !' +
+  'Prenez des photos et téléchargez-les sur Wikimedia Commons, puis résolvez l\'alerte (par exemple enlevez le modèle dans sa page ou ajoutez l\'image à Wikidata) et lors de la prochaine exécution vous verrez l\'épingle disparaître. Super boulot !' +
   '</p><hr/>' +
   '<p>Pour tout problème ou suggestion écrivez sur <a href="https://meta.wikimedia.org/wiki/Grants_talk:IEG/Wiki_needs_pictures" target="_blank">cette page</a>. Il s\'agit d\'un projet open source ! Nous allons coder ensemble dans ce <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">référentiel Github.</a></p>' +
-  '<p><small>L\'outil met à jour l\'Interface une fois par jour. S\'il vous plaît soyez patient, il faut un certain temps pour charger toutes les données.<small></p>'
+  '<p><small>L\'outil met à jour les données une fois par jour. Il faut un certain temps pour charger toutes les données, merci pour votre patience.<small></p>'
+
+var message_JA =
+  '<p><b>ウィキペディアで、画像が足りない文書が多いです。その画像、一緒に撮りましょう！</p><hr/>' +
+  '<p><b>使い方</b></p>' +
+  '<p><ul><li>左上のボタンでズーム調整。ダブルクリックやクラスターにクリックというズームのやり方もあります。</li>' +
+  '<li>右上のボタンはカテゴリのフィルターです。</li>' +
+  '<li>右下のボタンを押すと自分の現在地に飛べます。</li>' +
+  '<li>ポイントをマウスホバーすると文書の名前が見えます。クリックしたら詳細が表示されます。</li></ul>' +
+  '写真を撮って、Wikimedia Commonsにアップロードして、ウィキペディア文書から「画像依頼」のバナーを外したら、翌日はこのポイントが消えます。お疲れ様でした！' +
+  '</p><hr/>' +
+  '<p>質問があれば、<a href="https://meta.wikimedia.org/wiki/Grants_talk:IEG/Wiki_needs_pictures" target="_blank">プロジェクトページ</a>に連絡ください。オープンソースです！興味あれば<a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">Github</a>で</p>' +
+  '<p><small>データ更新が毎日行います。ウェブページが表示されるまで少し時間掛かりますが、よろしくお願いします。<small></p>'
