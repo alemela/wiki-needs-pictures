@@ -48,3 +48,9 @@ that load data and the map. All the data are downloaded when the webapp is
 loading so you will notice a slow start but a fast experience for the rest of
 the time. The loading time depends on the amount of pinpoints you want to
 visualize.
+
+## Translations
+Following the [KISS](https://en.wikipedia.org/wiki/KISS_principle) only little
+instructions are present inside the interface. Currently they are translated in
+English, Italian, German and French. It's very appreciated if you want to
+contribute with other languages! You can find all the texts in `js/message.js`.
