@@ -6,4 +6,4 @@ var client = new bot({
         path: '/w'
     });
 
-utils.digCategory(client, "Category:", "画像提供依頼", "011");
+utils.digCategory(client, "Category:", "画像提供依頼", "061");
