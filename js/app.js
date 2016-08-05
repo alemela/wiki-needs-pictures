@@ -187,9 +187,26 @@ map.on('overlayremove', function (a) {
     }
 });
 
+var userLang = navigator.language || navigator.userLanguage;
+userLang = userLang.toUpperCase();
+
 /* BUTTONS */
 
 L.easyButton('fa-info', function() {
+    var messageInABottle = "";
+    switch (true) {
+        case userLang.startsWith("DE"):
+            messageInABottle = message_DE;
+            break;
+        case userLang.startsWith("FR"):
+            messageInABottle = message_FR;
+            break;
+        case userLang.startsWith("IT"):
+            messageInABottle = message_IT;
+            break;
+        default:
+            messageInABottle = message_EN;
+    }
     bootbox.dialog({
         title: "<center>Wiki Needs Pictures</center>",
         message: messageInABottle
