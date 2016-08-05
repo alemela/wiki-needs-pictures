@@ -37,25 +37,25 @@ var message_DE =
   '<p><small>Das Tool aktualisiert die Ansicht täglich. Bitte seien Sie geduldig: es dauert eine Weile, bis die Daten geladen sind.<small></p>'
 
 var message_FR =
-  '<p><b>De nombreux articles de Wikipedia n\'ont aucune image</b> ou seulement quelques-unes. Certains d\'entre eux parlent de <b>choses qui sont l&agrave; dehors</b>, prêtes &agrave; être photographi&eacute;es. <b>Trouvez-les toutes !</b></p><hr/>' +
+  '<p><b>De nombreux articles de Wikipedia n\'ont aucune image</b> ou seulement quelques-unes. Certains d\'entre eux parlent de <b>choses qui sont l&agrave; dehors</b>, pr&ecirc;tes &agrave; &ecirc;tre photographi&eacute;es. <b>Trouvez-les toutes !</b></p><hr/>' +
   '<p><b>Instructions</b></p>' +
   '<p><ul><li>Utilisez le bouton dans le coin sup&eacute;rieur gauche ou double-cliquez sur la carte pour r&eacute;gler le zoom. Vous pouvez &eacute;galement cliquer sur un cluster pr&egrave;s de l\'endroit que vous souhaitez explorer.</li>' +
   '<li>Utilisez le bouton dans le coin sup&eacute;rieur droit pour filtrer les &eacute;pingles (ic&ocirc;nes pointues) par cat&eacute;gorie.</li>' +
   '<li>Utilisez le bouton dans le coin inf&eacute;rieur droit pour acc&eacute;der &agrave; votre position actuelle.</li>' +
   '<li>Passez sur un "&eacute;pingle" pour voir son nom. Faites un clic pour plus de d&eacute;tails et de liens.</li></ul>' +
-  'Prenez des photos et t&eacute;l&eacute;chargez-les sur Wikimedia Commons, puis r&eacute;soudrez l\'alerte (par exemple enlevez le mod&egrave;le dans sa page ou ajoutez l\'image &agrave; Wikidata) et lors de la prochaine ex&eacute;cution vous verrez l\'&eacute;pingle disparaître. Super boulot !' +
+  'Prenez des photos et t&eacute;l&eacute;chargez-les sur Wikimedia Commons, puis r&eacute;soudrez l\'alerte (par exemple enlevez le mod&egrave;le dans sa page ou ajoutez l\'image &agrave; Wikidata) et lors de la prochaine ex&eacute;cution vous verrez l\'&eacute;pingle dispara&icirc;tre. Super boulot !' +
   '</p><hr/>' +
   '<p>Pour tout probl&egrave;me ou suggestion &eacute;crivez sur <a href="' + talk_page + '" target="_blank">cette page</a>. Il s\'agit d\'un projet open source ! Nous allons le coder ensemble dans ce <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">r&eacute;f&eacute;rentiel Github.</a></p>' +
-  '<p><small>L\'outil met &agrave; jour l\'Interface une fois par jour. S\'il vous plaît soyez patient, il faut un certain temps pour charger toutes les donn&eacute;es.<small></p>'
+  '<p><small>L\'outil met &agrave; jour l\'Interface une fois par jour. S\'il vous pla&icirc;t soyez patient, il faut un certain temps pour charger toutes les donn&eacute;es.<small></p>'
 
 var message_ES =
-  '<p><b>Muchos artículos de Wikipedia tienen pocas imágenes o ninguna</b>. Algunos de ellos hablan de <b>cosas que están ahí</b>, listas para ser fotografiadas. <b>¡Encontradlos todos!</b></p><hr/>' +
+  '<p><b>Muchos art&iacute;culos de Wikipedia tienen pocas im&aacute;genes o ninguna</b>. Algunos de ellos hablan de <b>cosas que est&aacute;n ah&iacute;</b>, listas para ser fotografiadas. <b>¡Encontradlos todos!</b></p><hr/>' +
   '<p><b>Instrucciones</b></p>' +
-  '<p><ul><li>Utilice el botón de arriba a la izquierda o haga doble clic en el mapa para ajustar el zoom. Tambi&eacute;n puede hacer clic en un clúster de cerca de la ubicación que desee explorar.</li>' +
-  '<li>Utilice el botón superior derecho para filtrar lugares indicando la categoría.</li>' +
-  '<li>Utilice el botón de abajo a la derecha para ir a su posición actual.</li>' +
-  '<li>Pase por un lugar para ver su nombre. Haga un clic para ver más detalles y enlaces.</li></ul>' +
-  'Haga fotos y súbalas a Wikimedia Commons, despu&eacute;s haga caso de la advertencia relacionada (por ejemplo quite la plantilla en su página o añada la imagen a Wikidata) y la próxima vez verá desaparecer los lugares/las imágenes. ¡Buen trabajo!' +
+  '<p><ul><li>Utilice el bot&oacute;n de arriba a la izquierda o haga doble clic en el mapa para ajustar el zoom. Tambi&eacute;n puede hacer clic en un clúster de cerca de la ubicaci&oacute;n que desee explorar.</li>' +
+  '<li>Utilice el bot&oacute;n superior derecho para filtrar lugares indicando la categor&iacute;a.</li>' +
+  '<li>Utilice el bot&oacute;n de abajo a la derecha para ir a su posici&oacute;n actual.</li>' +
+  '<li>Pase por un lugar para ver su nombre. Haga un clic para ver m&aacute;s detalles y enlaces.</li></ul>' +
+  'Haga fotos y súbalas a Wikimedia Commons, despu&eacute;s haga caso de la advertencia relacionada (por ejemplo quite la plantilla en su p&aacute;gina o añada la imagen a Wikidata) y la pr&oacute;xima vez ver&aacute; desaparecer los lugares/las im&aacute;genes. ¡Buen trabajo!' +
   '</p><hr/>' +
-  '<p>Para cualquier problema o sugerencia, escriba a <a href="' + talk_page + '" target="_blank">esta página</a>. Este es un proyecto en código abierto ¡Codificamos juntos en este <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">repositorio de Github</a>!.</p>' +
-  '<p><small>La herramienta actualiza la vista una vez al día. Por favor tenga paciencia, tarda un poco en cargar todos los datos.</small></p>'
+  '<p>Para cualquier problema o sugerencia, escriba a <a href="' + talk_page + '" target="_blank">esta p&aacute;gina</a>. Este es un proyecto en c&oacute;digo abierto ¡Codificamos juntos en este <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">repositorio de Github</a>!.</p>' +
+  '<p><small>La herramienta actualiza la vista una vez al d&iacute;a. Por favor tenga paciencia, tarda un poco en cargar todos los datos.</small></p>'
