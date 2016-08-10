@@ -52,5 +52,5 @@ visualize.
 ## Translations
 Following the [KISS](https://en.wikipedia.org/wiki/KISS_principle) only little
 instructions are present inside the interface. Currently they are translated in
-English, Italian, German and French. It's very appreciated if you want to
+English, Italian, German, French and Spanish. It's very appreciated if you want to
 contribute with other languages! You can find all the texts in `js/message.js`.

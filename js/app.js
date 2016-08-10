@@ -198,6 +198,9 @@ L.easyButton('fa-info', function() {
         case userLang.startsWith("DE"):
             messageInABottle = message_DE;
             break;
+        case userLang.startsWith("ES"):
+            messageInABottle = message_ES;
+            break;
         case userLang.startsWith("FR"):
             messageInABottle = message_FR;
             break;
