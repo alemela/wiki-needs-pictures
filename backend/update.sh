@@ -15,7 +15,7 @@ sed -i '0,/^/s//title,lat,lng,type,code,wd\n/' sorted.csv
 #save current dataset into backup directory
 mkdir -p ../data/backup
 date=`date +"%Y-%m-%d_%H-%M-%S"`
-mv ../data/data.csv ../data/backup/$date.csv
+mv ../data/data.csv ../data/backup/$date.csv 2>/dev/null
 
 #make current the newly generated one
 mv sorted.csv ../data/data.csv
