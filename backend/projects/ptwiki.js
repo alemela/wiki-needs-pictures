@@ -7,8 +7,3 @@ var client = new bot({
     });
 
 utils.digSimpleCategory(client, "!Artigos sem imagens", "041");
-
-
-
-
-

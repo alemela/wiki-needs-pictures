@@ -8,8 +8,3 @@ var client = new bot({
 
 utils.digCategoryTalk(client, "Categoria:", "Immagini richieste", "Discussione:", "001");
 utils.digCategoryTalk(client, "Categoria:", "Voci monitorate - immagini E", "Discussione:", "002");
-
-
-
-
-
