@@ -10,7 +10,7 @@ sort -u temp.csv > sorted.csv
 rm temp.csv
 
 #add header
-sed -i '0,/^/s//title,lat,lng,type,code,wd\n/' sorted.csv
+sed -i '0,/^/s//title,lat,lng,type,code\n/' sorted.csv
 
 #save current dataset into backup directory
 mkdir -p ../data/backup
@@ -19,3 +19,12 @@ mv ../data/data.csv ../data/backup/$date.csv 2>/dev/null
 
 #make current the newly generated one
 mv sorted.csv ../data/data.csv
+
+#split by countries
+python geo.py
+
+#add header
+for file in ../data/countries/*
+do
+    sed -i '0,/^/s//title,lat,lng,type,code\n/' $file
+done

@@ -1,4 +1,4 @@
-var dataUrl = 'data/data.csv';
+var dataUrl = 'data/countries/';
 var zoom = 2;
 var minZoom = 2;
 var maxZoom = 16;

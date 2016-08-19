@@ -133,10 +133,22 @@ var popupGenerator = function(feature, layer) {
 /* CSV LOADING */
 
 $(document).ready( function() {
+    bootbox.dialog({
+        animate: true,
+        closeButton: false,
+        message:
+            '<script src="js/countries.js"></script><input id="autocountries" type="text" placeholder="Choose a country" class="form-control input-md" style="width:50%; margin: 0 auto;"/>' +
+            '<br /><center>or</center><br />' +
+            '<center><button type="button" class="btn btn-success" onclick="findMe();">use your location</button></center>'
+    });
+});
+
+var load_data = function (cc) {
+    console.log("Loading " + cc + " data...");
     $.ajax ({
         type:'GET',
         dataType:'text',
-        url: dataUrl,
+        url: dataUrl + cc,
         contentType: "text/csv; charset=utf-8",
         error: function() {
             alert('Error retrieving csv file');
@@ -146,7 +158,20 @@ $(document).ready( function() {
             addCsvMarkers();
         }
     });
-});
+}
+
+var findMe = function () {
+    navigator.geolocation.getCurrentPosition(function(position) {
+        $.getJSON('http://ws.geonames.org/countryCode', {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+            type: 'JSON'
+        }, function(result) {
+            load_data("IT"); //XXX
+            bootbox.hideAll();
+        });
+    });
+}
 
 /* LAYERS CONTROL */ //XXX too much hardwritten
 
@@ -225,5 +250,3 @@ L.easyButton('fa-info', function() {
 L.easyButton('fa-compass', function (){
     map.locate({setView: true});
 }, "Interact with the map", { position: 'bottomright' }).addTo(map);
-
-map.locate({setView: true});
