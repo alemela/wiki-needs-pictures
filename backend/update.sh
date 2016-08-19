@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#for file in projects/*.js
+for file in projects/*.js
 do
     nodejs $file
 done
