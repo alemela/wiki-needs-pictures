@@ -37,16 +37,28 @@ var message_DE =
   '<p><small>Das Tool aktualisiert die Ansicht täglich. Bitte seien Sie geduldig: es dauert eine Weile, bis die Daten geladen sind.<small></p>'
 
 var message_FR =
-  '<p><b>De nombreux articles de Wikipedia n\'ont aucune image</b> ou seulement quelques-unes. Certains d\'entre eux parlent de <b>choses qui sont l&agrave; dehors</b>, pr&ecirc;tes &agrave; &ecirc;tre photographi&eacute;es. <b>Trouvez-les toutes !</b></p><hr/>' +
+  '<p><b>De nombreux articles de Wikip&eacute;dia n\'ont pas d\'image</b> ou seulement quelques-unes. Certains d\'entre eux ont pour sujet des <b>choses qui sont l&agrave; dehors</b>, pr&ecirc;tes &agrave; &ecirc;tre photographi&eacute;es. <b>Trouvez-les toutes !</b></p><hr/>' +
   '<p><b>Instructions</b></p>' +
-  '<p><ul><li>Utilisez le bouton dans le coin sup&eacute;rieur gauche ou double-cliquez sur la carte pour r&eacute;gler le zoom. Vous pouvez &eacute;galement cliquer sur un cluster pr&egrave;s de l\'endroit que vous souhaitez explorer.</li>' +
-  '<li>Utilisez le bouton dans le coin sup&eacute;rieur droit pour filtrer les &eacute;pingles (ic&ocirc;nes pointues) par cat&eacute;gorie.</li>' +
+  '<p><ul><li>Utilisez le bouton dans le coin sup&eacute;rieur gauche ou double-cliquez sur la carte pour r&eacute;gler le zoom. Vous pouvez &eacute;galement cliquer sur un cluster près de l\'endroit que vous souhaitez explorer.</li>' +
+  '<li>Utilisez le bouton dans le coin sup&eacute;rieur droit pour filtrer les &eacute;pingles (icones pointues) par cat&eacute;gorie.</li>' +
   '<li>Utilisez le bouton dans le coin inf&eacute;rieur droit pour acc&eacute;der &agrave; votre position actuelle.</li>' +
   '<li>Passez sur un "&eacute;pingle" pour voir son nom. Faites un clic pour plus de d&eacute;tails et de liens.</li></ul>' +
-  'Prenez des photos et t&eacute;l&eacute;chargez-les sur Wikimedia Commons, puis r&eacute;soudrez l\'alerte (par exemple enlevez le mod&egrave;le dans sa page ou ajoutez l\'image &agrave; Wikidata) et lors de la prochaine ex&eacute;cution vous verrez l\'&eacute;pingle dispara&icirc;tre. Super boulot !' +
+  'Prenez des photos et t&eacute;l&eacute;chargez-les sur Wikimedia Commons, puis r&eacute;solvez l\'alerte (par exemple enlevez le modèle dans sa page ou ajoutez l\'image &agrave; Wikidata) et lors de la prochaine ex&eacute;cution vous verrez l\'&eacute;pingle disparaître. Super boulot !' +
   '</p><hr/>' +
-  '<p>Pour tout probl&egrave;me ou suggestion &eacute;crivez sur <a href="' + talk_page + '" target="_blank">cette page</a>. Il s\'agit d\'un projet open source ! Nous allons le coder ensemble dans ce <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">r&eacute;f&eacute;rentiel Github.</a></p>' +
-  '<p><small>L\'outil met &agrave; jour l\'Interface une fois par jour. S\'il vous pla&icirc;t soyez patient, il faut un certain temps pour charger toutes les donn&eacute;es.<small></p>'
+  '<p>Pour tout problème ou suggestion &eacute;crivez sur <a href="https://meta.wikimedia.org/wiki/Grants_talk:IEG/Wiki_needs_pictures" target="_blank">cette page</a>. Il s\'agit d\'un projet open source ! Nous allons coder ensemble dans ce <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">r&eacute;f&eacute;rentiel Github.</a></p>' +
+  '<p><small>L\'outil met &agrave; jour les donn&eacute;es une fois par jour. Il faut un certain temps pour charger toutes les donn&eacute;es, merci pour votre patience.<small></p>'
+
+var message_JA =
+  '<p><b>ウィキペディアで、画像が足りない文書が多いです。その画像、一緒に撮りましょう！</p><hr/>' +
+  '<p><b>使い方</b></p>' +
+  '<p><ul><li>左上のボタンでズーム調整。ダブルクリックやクラスターにクリックというズームのやり方もあります。</li>' +
+  '<li>右上のボタンはカテゴリのフィルターです。</li>' +
+  '<li>右下のボタンを押すと自分の現在地に飛べます。</li>' +
+  '<li>ポイントをマウスホバーすると文書の名前が見えます。クリックしたら詳細が表示されます。</li></ul>' +
+  '写真を撮って、Wikimedia Commonsにアップロードして、ウィキペディア文書から「画像依頼」のバナーを外したら、翌日はこのポイントが消えます。お疲れ様でした！' +
+  '</p><hr/>' +
+  '<p>質問があれば、<a href="https://meta.wikimedia.org/wiki/Grants_talk:IEG/Wiki_needs_pictures" target="_blank">プロジェクトページ</a>に連絡ください。オープンソースです！興味あれば<a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">Github</a>で</p>' +
+  '<p><small>データ更新が毎日行います。ウェブページが表示されるまで少し時間掛かりますが、よろしくお願いします。<small></p>'
 
 var message_ES =
   '<p><b>Muchos art&iacute;culos de Wikipedia tienen pocas im&aacute;genes o ninguna</b>. Algunos de ellos hablan de <b>cosas que est&aacute;n ah&iacute;</b>, listas para ser fotografiadas. <b>¡Encontradlos todos!</b></p><hr/>' +
