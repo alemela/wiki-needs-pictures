@@ -6,4 +6,4 @@ var client = new bot({
         path: '/w'
     });
 
-utils.digCategory(client, "Catégorie:", "À illustrer", "011");
+utils.digSimpleCategory(client, "Catégorie:", "À illustrer", "011");
