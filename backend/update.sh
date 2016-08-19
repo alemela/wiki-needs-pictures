@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #for file in projects/*.js
-#do
-#    nodejs $file
-#done
+do
+    nodejs $file
+done
 
 #remove duplicated lines
 sort -u temp.csv > sorted.csv
