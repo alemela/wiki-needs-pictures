@@ -6,4 +6,5 @@ var client = new bot({
         path: '/w'
     });
 
-utils.digCategory(client, "Categoria:", "Articles que necessiten una foto", "031");
+utils.digCategory(client, "Categoria:", "Articles de geografia que necessiten una foto", "031");
+utils.digCategory(client, "Categoria:", "Articles d'edificis que necessiten una foto‎", "032");
