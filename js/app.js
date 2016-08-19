@@ -90,13 +90,13 @@ var addCsvMarkers = function() {
     generic.addData(dataCsv);
     generic.addData(dataCsv);
 
+    map.addLayer(markers);
     //aggrego layers in markers
     markers.addLayer(airport);
     markers.addLayer(railwaystation);
     markers.addLayer(city);
     markers.addLayer(generic);
 
-    map.addLayer(markers);
     try {
         var bounds = markers.getBounds();
         if (bounds) {
@@ -204,8 +204,14 @@ L.easyButton('fa-info', function() {
         case userLang.startsWith("FR"):
             messageInABottle = message_FR;
             break;
+        case userLang.startsWith("JA"):
+            messageInABottle = message_JA;
+            break;
         case userLang.startsWith("IT"):
             messageInABottle = message_IT;
+            break;
+        case userLang.startsWith("SV"):
+            messageInABottle = message_SV;
             break;
         default:
             messageInABottle = message_EN;
