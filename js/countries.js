@@ -258,7 +258,7 @@ $('#autocountries').autocomplete({
         $(this).autocomplete('widget').css('z-index', 99999);
     },
     onSelect: function (suggestion) {
-        load_data(suggestion.data);
         bootbox.hideAll();
+        load_data(suggestion.data);
     }
 });

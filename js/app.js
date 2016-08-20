@@ -137,9 +137,10 @@ $(document).ready( function() {
         animate: true,
         closeButton: false,
         message:
-            '<script src="js/countries.js"></script><input id="autocountries" type="text" placeholder="Choose a country" class="form-control input-md" style="width:50%; margin: 0 auto;"/>' +
+            '<script src="js/countries.js"></script><input id="autocountries" type="text" placeholder="Choose a country" class="form-control input-md"/>' +
             '<br /><center>or</center><br />' +
-            '<center><button type="button" class="btn btn-success" onclick="findMe();">use your location</button></center>'
+            '<center><button type="button" class="btn btn-success" onclick="findMe();">use your location</button></center>' +
+            '<hr/><center><small>After selected, please wait some seconds while loading.</small></center>'
     });
 });
 
@@ -167,8 +168,8 @@ var findMe = function () {
         success: function(data) {
             var geo = JSON.stringify(data);
             var cc = JSON.parse(geo).country_code
-            load_data(cc);
             bootbox.hideAll();
+            load_data(cc);
         },
         error: function(xhr, status, error) {
             console.error(xhr.status);
