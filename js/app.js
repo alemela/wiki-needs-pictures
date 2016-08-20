@@ -161,15 +161,18 @@ var load_data = function (cc) {
 }
 
 var findMe = function () {
-    navigator.geolocation.getCurrentPosition(function(position) {
-        $.getJSON('http://ws.geonames.org/countryCode', {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-            type: 'JSON'
-        }, function(result) {
-            load_data("IT"); //XXX
+    $.ajax({
+        url: "https://freegeoip.net/json/?callback=",
+        type: "GET",
+        success: function(data) {
+            var geo = JSON.stringify(data);
+            var cc = JSON.parse(geo).country_code
+            load_data(cc);
             bootbox.hideAll();
-        });
+        },
+        error: function(xhr, status, error) {
+            console.error(xhr.status);
+        }
     });
 }
 
