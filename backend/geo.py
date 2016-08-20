@@ -16,4 +16,4 @@ with open('../data/data.csv', 'rb') as csvfile:
 
         country_file = open('../data/countries/' + location["country_code"], 'a')
         writer = csv.writer(country_file)
-        writer.writerow([row[0], row[1], row[2], row[3], row[4]])
+        writer.writerow([row[0], row[1], row[2], row[3], row[4], row[5]])

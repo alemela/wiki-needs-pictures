@@ -62,7 +62,7 @@ var locatePage = function (client, pagename, code) {
     client.api.call(params, function(err, info, next, data) {
         for (id in info.pages) {
             if (info.pages[id].coordinates !== undefined) {
-                var raw = '"'+info.pages[id].title+'",'+info.pages[id].coordinates[0].lat+','+info.pages[id].coordinates[0].lon+','+info.pages[id].coordinates[0].type+','+code+'\n';
+                var raw = '"'+info.pages[id].title+'",'+info.pages[id].coordinates[0].lat+','+info.pages[id].coordinates[0].lon+','+info.pages[id].coordinates[0].type+','+code+',\n';
                 fs.appendFile("temp.csv", raw, function(err) {
                 });
             }

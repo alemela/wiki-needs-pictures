@@ -8,9 +8,10 @@ done
 #remove duplicated lines
 sort -u temp.csv > sorted.csv
 rm temp.csv
+rm tempwd.csv
 
 #add header
-sed -i '0,/^/s//title,lat,lng,type,code\n/' sorted.csv
+sed -i '0,/^/s//title,lat,lng,type,code,wd\n/' sorted.csv
 
 #save current dataset into backup directory
 mkdir -p ../data/backup
@@ -29,5 +30,5 @@ python geo.py
 #add header
 for file in ../data/countries/*
 do
-    sed -i '0,/^/s//title,lat,lng,type,code\n/' $file
+    sed -i '0,/^/s//title,lat,lng,type,code,wd\n/' $file
 done
