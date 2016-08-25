@@ -83,3 +83,15 @@ var message_SV =
   '</p><hr/>' +
   '<p>För eventuella problem eller förslag skriv dem på den <a href="' + talk_page + '" target="_blank">här sidan</a>. Detta är ett open source projekt! Låt oss koda tillsammans i denna <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">Github databas</a>.</p>' +
   '<p><small>Verktyget uppdaterar vyn en gång om dagen. Ha tålamod, det tar en stund att ladda alla data.</small></p>'
+
+var message_PL =
+  '<p><b>W wielu artykułach Wikipedii brakuje ilustracji</b> lub jest ich niewiele. Niektóre artykuły opisują <b>obiekty i miejsca</b>, które tylko czekają na sfotografowanie. <b>Znajdź je wszystkie!</b></p><hr/>' +
+  '<p><b>Instrukcja</b></p>' +
+  '<p><ul><li>Mapę możesz powiększyć za pomocą przycisku w lewym górnym rogu, lub klikając w nią dwa razy. Możesz też kliknąć na grupę znaczników w pobliżu miejsca, którym się intersujesz.</li>' +
+  '<li>Przycisk w prawym górnym rogu otwiera filtr kategorii.</li>' +
+  '<li>Przycisk w prawym dolnym rogu wykrywa twoje położenie.</li>' +
+  '<li>Umieść kursor myszy nad wskaźnikiem, aby wyświetlić jego nazwę. Po kliknięciu zobaczysz również szczegóły i linki.</li></ul>' +
+  'Aby usunąć wskaźnik z mapy, zrób zdjęcie obiektu i wyślij je na Wikimedia Commons. Dodaj odnośnik do zdjęcia do strony Wikidata powiązanej z artykułem. Jeśli artykuł ma szablon o braku ilustracji, usuń go. Przy najbliższej aktualizacji danych, wskaźnik zniknie z mapy. Dziękujemy!' +
+  '</p><hr/>' +
+  '<p>Jeśli masz trudności lub propozycje, zostaw wiadomość na <a href="' + talk_page + '" target="_blank">tej stronie</a>. To projekt open source! Przyłącz się do nas<a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">w tym repozytorium.</a></p>' +
+  '<p><small>Dane aktualizowane są raz dziennie. Prosimy o cierpliwość, wczytanie wszystkich danych zajmuje trochę czasu.</small></p>'
