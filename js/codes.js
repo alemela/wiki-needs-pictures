@@ -8,5 +8,6 @@ var codes = [
     {id: "041", site: "pt.wikipedia.org", prj: "ptwiki", source: "Categoria:!Artigos sem imagens"},
     {id: "051", site: "sv.wikipedia.org", prj: "svwiki", source: "Kategori:Illustrationsbehov"},
     {id: "061", site: "ja.wikipedia.org", prj: "jawiki", source: "Category:画像提供依頼"},
+    {id: "071", site: "hu.wikipedia.org", prj: "huwiki", source: "Kategória:Keresett képek"},
     {id: "999", site: "wikidata.org", prj: "wikidata", source: null}
 ];
