@@ -222,28 +222,9 @@ userLang = userLang.toUpperCase();
 /* BUTTONS */
 
 L.easyButton('fa-info', function() {
-    var messageInABottle = "";
-    switch (true) {
-        case userLang.startsWith("DE"):
-            messageInABottle = message_DE;
-            break;
-        case userLang.startsWith("ES"):
-            messageInABottle = message_ES;
-            break;
-        case userLang.startsWith("FR"):
-            messageInABottle = message_FR;
-            break;
-        case userLang.startsWith("JA"):
-            messageInABottle = message_JA;
-            break;
-        case userLang.startsWith("IT"):
-            messageInABottle = message_IT;
-            break;
-        case userLang.startsWith("SV"):
-            messageInABottle = message_SV;
-            break;
-        default:
-            messageInABottle = message_EN;
+    var messageInABottle = "EN";
+    if ('message_' + userLang.substr(0, 2) in window) {
+        messageInABottle = 'message_' + userLang.substr(0, 2);
     }
     bootbox.dialog({
         title: "<center>Wiki Needs Pictures</center>",

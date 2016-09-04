@@ -83,3 +83,15 @@ var message_SV =
   '</p><hr/>' +
   '<p>För eventuella problem eller förslag skriv dem på den <a href="' + talk_page + '" target="_blank">här sidan</a>. Detta är ett open source projekt! Låt oss koda tillsammans i denna <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">Github databas</a>.</p>' +
   '<p><small>Verktyget uppdaterar vyn en gång om dagen. Ha tålamod, det tar en stund att ladda alla data.</small></p>'
+
+var message_HU =
+  '<p><b>Sok Wikipédia-szócikkben nincs elég kép.</b> Némelyikük tárgya könnyen megtalálható és lefényképezhető. <b>Fényképezd le mind!</b></p><hr/>' +
+  '<p><b>Útmutató</b></p>' +
+  '<p><ul><li>Használd a bal felső gombot a nagyításhoz, vagy kattints duplán a térkép egy pontjára. Rákattinthatsz valamelyik, az uticélod közelében lévő csoportra is.</li>' +
+  '<li>A jobb felső gombbal tudsz kategória szerint szűrni.</li>' +
+  '<li>A jobb alsó gomb a jelenlegi tartózkodási helyedre ugrik.</li>' +
+  '<li>Ha egy jelző fölé húzod az egeret, látni fogod a nevét. Rákattintva további részletek és az odavezető link is megjelennek.</li></ul>' +
+  'Fényképezd le a cikk tárgyát és töltsd fel a Wikimédia Commonsba, aztán vedd le a képet a listáról (a kért képek listájáról való törléssel, vagy a megfelelő kategória eltávolításával a szócikkről) és a következő frissítéskor a jelző eltűnik a térképről. Szép munka volt!' +
+  '</p><hr/>' +
+  '<p>Ha bármilyen problémád vagy javaslatod van, írj <a href="' + talk_page + '" target="_blank">erre a lapra</a>! Ez egy <a href="https://github.com/alemela/wiki-needs-pictures" target="_blank">nyílt forráskódú projekt</a>. Fejlesszük együtt!</p>' +
+  '<p><small>A térkép naponta frissül. Kérlek, légy türelmes, az adatok betöltése eltart egy darabig.</small></p>'
