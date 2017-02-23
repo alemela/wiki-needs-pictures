@@ -1,0 +1,11 @@
+[
+    {
+      "name" : "wiki-needs-pictures",
+      "title" : "Wiki Needs Pictures",
+      "description" : "Map showing entities around the world that need photographs on Wikipedia.",
+      "url" : "https://tools.wmflabs.org/wiki-needs-pictures/",
+      "keywords" : "Wikipedia, map, Commons, illustration, picture, photograph, image, around, coordinate",
+      "author" : "Alessio",
+      "repository" : "https://github.com/alemela/wiki-needs-pictures"
+    }
+]
